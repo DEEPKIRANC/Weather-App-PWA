@@ -11,12 +11,23 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   <!---- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
  
     <title>React App</title>
   </head>
   <body>
     <div id="root"></div>
-  
+    <script>
+      if('serviceWorker' in navigator)
+      {
+        window.addEventListener('load',()=>{
+          navigator.serviceWorker.register("./serviceworker.js")
+          .then((reg)=>{
+            console.log('Success: ',reg.scope); //scope will show the URL on which the service worked is installed.
+          })
+          .catch((err)=>{console.log("Failure: ",err)});
+        })
+      }
+    </script>
   </body>
 </html>
