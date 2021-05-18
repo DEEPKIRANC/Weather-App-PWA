@@ -15,10 +15,12 @@ const App=()=>{
     
     }
     return <div className="main-container">
+        <h1>Weather App - Progressive Web App</h1>
+        <h3>(Check Weather Updates for any city , installable/offline support)</h3>
         <input 
         type="text"
         className="search"
-        placeholder="Enter City..."
+        placeholder="Enter City Name.."
         value={query}
         onChange={e=>setQuery(e.target.value)}
         onKeyPress={search}

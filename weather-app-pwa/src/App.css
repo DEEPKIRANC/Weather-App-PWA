@@ -4,10 +4,11 @@ html, body, #root {
     color: #1e2432;
     height: 100%;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 .main-container {
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://imgbb.com/7XgmzCw');
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('./backgroundImg.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -19,7 +20,18 @@ html, body, #root {
     align-items: center;
     flex-direction: column;
 }
+.main-container > h1:first-child
+{
+    color:white;
+    
+    
 
+}
+.main-container > h3
+{
+    color:white;
+    opacity:0.7;
+}
 .search {
     outline: none;
     padding: 20px 7%;
@@ -89,5 +101,11 @@ p {
 
     .city {
         padding: 40px 20%;
+    }
+    .main-container >h1,h3{
+        text-align: center;
+    }
+    .main-container > h1{
+        font-size: 1.25rem;
     }
 }
